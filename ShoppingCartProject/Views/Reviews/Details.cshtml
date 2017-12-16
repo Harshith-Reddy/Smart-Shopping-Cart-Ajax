@@ -1,0 +1,50 @@
+﻿@model ShoppingCartProject.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Review</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.shopItem.ItemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shopItem.ItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subjectLine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subjectLine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.reviewDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.reviewDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
